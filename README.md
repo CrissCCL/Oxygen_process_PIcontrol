@@ -28,7 +28,7 @@ Real pilot-plant installation used during identification and controller validati
     <td align="center">
       <img alt="Experimental Setup - Photo 1"
            src="https://github.com/user-attachments/assets/02acd3c3-50b7-4b46-a6ba-3499929461fc"
-           width="250">
+           width="400">
     </td>
     <td align="center">
       <img alt="Experimental Setup - Photo 2"
@@ -49,7 +49,7 @@ High-level supervisory architecture and closed-loop control structure.
     <td align="center">
       <img alt="System Architecture"
            src="https://github.com/user-attachments/assets/b234a6c8-6c1f-448c-9c28-111485143da5"
-           width="500">
+           width="250">
     </td>
     <td align="center">
       <img alt="Closed-Loop Control Block Diagram"

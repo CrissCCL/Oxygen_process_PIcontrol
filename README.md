@@ -212,16 +212,17 @@ Performance was confirmed through repeated on-plant tests.
 Castro et al., *Automatic Control for the Production of Alginate by Azotobacter Vinelandii*, IEEE  
 https://ieeexplore.ieee.org/document/8905995
 
+
+
+
+## 🔒 Data availability
+Real experimental data is not included due to confidentiality and collaborative research constraints.
+The repository provides a fully reproducible workflow; to run it, place your local `dataOX.mat`
+containing `o_in` and `o_out` in the project root (ignored by git).
+
 ## ⚠️ Disclaimer
-
-This repository is shared as a **portfolio-style case study** derived from a real pilot-scale control project.
-
-- Sensitive, proprietary, or identifying information has been removed or anonymized.
-- If any dataset is included, it should be **sanitized** or **synthetic**.
-- The repository demonstrates the engineering workflow:
-  open-loop identification issues → stabilizing PI tuning → closed-loop identification → final PI design.
-
-No confidential plant data or proprietary software is distributed.
+This repository is a portfolio-style case study focused on modeling, identification, and control.
+All sensitive or proprietary information has been removed. No plant/HMI software or confidential datasets are distributed.
 
 
 ## 🤝 Support Projects

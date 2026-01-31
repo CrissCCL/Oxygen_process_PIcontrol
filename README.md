@@ -1,7 +1,6 @@
 # 🧪⚙️ Closed-Loop Identification & PI Control  
-## Oxygen Transfer Rate (VTO) — Industrial Process Control Case Study
 
----
+## Oxygen Transfer Rate (VTO) — Industrial Process Control Case Study
 
 ## 📖 Overview
 This repository documents a **practical industrial workflow** for **system identification and PI control**
@@ -14,7 +13,6 @@ Instead of forcing a purely theoretical model, the controller was engineered usi
 - Closed-loop identification with the plant stabilized
 - Final PI refinement and experimental validation
 
----
 
 ## 📂 Content
 - `matlab/` → identification + PI tuning scripts
@@ -23,12 +21,14 @@ Instead of forcing a purely theoretical model, the controller was engineered usi
 
 # 🏭 Experimental Setup (Pilot Plant)
 
+Real pilot-plant installation used during identification and controller validation.
+
 <table align="center">
   <tr>
     <td align="center">
       <img alt="Experimental Setup - Photo 1"
            src="https://github.com/user-attachments/assets/02acd3c3-50b7-4b46-a6ba-3499929461fc"
-           width="420">
+           width="250">
     </td>
     <td align="center">
       <img alt="Experimental Setup - Photo 2"
@@ -38,9 +38,11 @@ Instead of forcing a purely theoretical model, the controller was engineered usi
   </tr>
 </table>
 
----
+
 
 # 🔧 System Architecture & Control Loop
+
+High-level supervisory architecture and closed-loop control structure.
 
 <table align="center">
   <tr>
@@ -57,13 +59,17 @@ Instead of forcing a purely theoretical model, the controller was engineered usi
   </tr>
 </table>
 
----
 
 # 🛠 Methodology
 
 ## 1️⃣ Open-loop identification (OL)
-Step-response experiments and linear model estimation  
-→ inconsistent parameters due to disturbances / drift
+However, different experiments produced **significantly different parameters**, revealing:
+
+- disturbance sensitivity  
+- nonlinear behavior  
+- poor reproducibility  
+
+This made open-loop models unreliable for direct controller design.
 
 <p align="center">
   <img alt="Open loop identification"
@@ -71,10 +77,21 @@ Step-response experiments and linear model estimation
        width="550">
 </p>
 
----
 
 ## 2️⃣ Stabilizing PI (robust-first strategy)
-PI tuned for disturbance rejection and safe regulation.
+
+A simple PI controller was tuned via **exhaustive search** to obtain:
+
+- stable behavior  
+- smooth regulation  
+- disturbance rejection  
+- safe plant operation  
+
+Instead of aggressive tuning, the goal was to **stabilize the process first** and enable clean data collection.
+
+As shown, at approximately **30.62 hours**, the system is disturbed due to the change in silica responsible for drying the air.  
+The process recovers and stabilizes around **30.7 hours**, corresponding to a settling time of approximately **280 seconds (2% criterion)**.
+
 
 <table align="center">
   <tr>
@@ -91,11 +108,18 @@ PI tuned for disturbance rejection and safe regulation.
   </tr>
 </table>
 
----
+
 
 ## 3️⃣ Closed-loop identification (CL)
-Identification performed with the process stabilized  
-→ improved SNR and consistent model estimate
+
+With the process stabilized, identification was repeated under closed-loop operation.
+
+This provided:
+
+- improved signal-to-noise ratio  
+- reduced disturbance influence  
+- consistent parameter estimation  
+- more reliable model for control design
 
 <p align="center">
   <img alt="Closed Loop identification"
@@ -103,11 +127,15 @@ Identification performed with the process stabilized
        width="550">
 </p>
 
----
+
 
 ## 4️⃣ Final PI design + validation
-Refined PI designed using the CL model  
-→ reduced overshoot and improved VTO stability
+
+Using the refined closed-loop model, the PI controller was redesigned and experimentally validated, achieving:
+
+- lower overshoot  
+- improved robustness  
+- faster stabilization of VTO  
 
 ---
 
@@ -124,12 +152,12 @@ Refined PI designed using the CL model
   <tr>
     <td align="center">
       <img alt="Initial PI response"
-           src="INITIAL_PI_IMAGE_URL"
+           src="https://github.com/user-attachments/assets/3e1c0d56-78c7-4a8e-a7a6-f63e982623fb"
            width="520">
     </td>
     <td align="center">
       <img alt="Final PI response"
-           src="FINAL_PI_IMAGE_URL"
+           src="https://github.com/user-attachments/assets/3e1c0d56-78c7-4a8e-a7a6-f63e982623fb"
            width="520">
     </td>
   </tr>
@@ -146,7 +174,15 @@ Refined PI designed using the CL model
 - Industrial commissioning workflow
 - HMI/SCADA integration (LabVIEW)
 
----
+# 🧠 Skills Demonstrated
+- System identification (open & closed loop)
+- PI controller design and tuning
+- Robust control under uncertainty
+- Experimental validation
+- MATLAB (System Identification / Control)
+- Industrial commissioning workflow
+- HMI/SCADA integration (LabVIEW)
+
 
 # 📚 Related Publication
 Castro et al., *Automatic Control for the Production of Alginate by Azotobacter Vinelandii*, IEEE  

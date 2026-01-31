@@ -165,14 +165,6 @@ Using the refined closed-loop model, the PI controller was redesigned and experi
 
 ---
 
-# 🧠 Skills Demonstrated
-- System identification (open & closed loop)
-- PI controller design and tuning
-- Robust control under uncertainty
-- Experimental validation
-- MATLAB (System Identification / Control)
-- Industrial commissioning workflow
-- HMI/SCADA integration (LabVIEW)
 
 # 🧠 Skills Demonstrated
 - System identification (open & closed loop)
@@ -181,7 +173,6 @@ Using the refined closed-loop model, the PI controller was redesigned and experi
 - Experimental validation
 - MATLAB (System Identification / Control)
 - Industrial commissioning workflow
-- HMI/SCADA integration (LabVIEW)
 
 
 # 📚 Related Publication

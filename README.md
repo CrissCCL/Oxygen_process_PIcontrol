@@ -41,7 +41,7 @@ Instead of forcing a single theoretical model, the controller was engineered usi
     <td align="center">
       <img alt="System Architecture"
            src="https://github.com/user-attachments/assets/b234a6c8-6c1f-448c-9c28-111485143da5"
-           width="520">
+           width="400">
     </td>
     <td align="center">
       <img alt="Closed-Loop Control Block Diagram"

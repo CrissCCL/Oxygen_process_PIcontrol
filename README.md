@@ -65,15 +65,32 @@ Instead of forcing a single theoretical model, the controller was engineered usi
 Step-response experiments and linear model estimation  
 → inconsistent parameters due to disturbances / drift
 
-> ✅ Place plot at: `docs/open_loop_identification.png` (Fig 1.3 OR Fig 1.4)
-
-![Open-loop identification](docs/open_loop_identification.png)
+<p align="center">
+  <img alt="Open loop identification" src="https://github.com/user-attachments/assets/60b10e27-f751-4fac-8049-6bbd12661fe0" width="550">
+</p>
 
 ---
 
 ### 2️⃣ Stabilizing PI (robust-first strategy)
-PI tuned via exhaustive search  
+PI tuned for disturbance rejection
 → safe regulation and plant-friendly behavior (clean data capture)
+As shown, at 30.62 hours the system is disturbed due to the change in silica, which is responsible for drying the air. The system stabilizes at approximately 30.7 hours, considering a 2% tolerance, which implies that the system reaches a steady state in approximately 280 seconds, corresponding to the apparent settling time.
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img lt="Disturabance rejection"
+           src="https://github.com/user-attachments/assets/f1a91a3f-1270-4a5b-8e8f-913b8e6ee9df"
+           width="550">
+    </td>
+    <td align="center">
+      <img alt="Disturabance rejection zoom"
+           src="https://github.com/user-attachments/assets/de49aa52-9f62-4b3a-bd31-7227cd918ddc"
+           width="550">
+    </td>
+  </tr>
+</table>
+
 
 ---
 
@@ -81,10 +98,9 @@ PI tuned via exhaustive search
 Identification performed with the process stabilized  
 → improved SNR and consistent model estimate
 
-> ✅ Place plot at: `docs/closed_loop_identification.png` (Fig 3.2)
-
-![Closed-loop identification](docs/closed_loop_identification.png)
-
+<p align="center">
+  <img alt="Closed Loop identification" src="https://github.com/user-attachments/assets/4e6a0499-229b-49f7-935b-5e4aa87bdd07" width="550">
+</p>
 ---
 
 ### 4️⃣ Final PI design + validation

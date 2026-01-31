@@ -3,15 +3,35 @@
 ## Oxygen Transfer Rate (VTO) — Industrial Process Control Case Study
 
 ## 📖 Overview
-This repository documents a **practical industrial workflow** for **system identification and PI control**
-applied to a **pilot-scale biochemical process**, where oxygen dynamics directly impact the **Oxygen Transfer Rate (VTO)**.
+This project presents an **industrial-style commissioning workflow** for system identification and PI control
+applied to a **pilot-scale biochemical process**.
 
-Instead of forcing a purely theoretical model, the controller was engineered using **real commissioning steps**:
+Instead of relying on purely theoretical models, the controller was developed directly from **plant tests and field data**.
 
-- Open-loop identification (inconsistent models under disturbances / nonlinearities)
-- Stabilizing PI tuning via exhaustive search
-- Closed-loop identification with the plant stabilized
-- Final PI refinement and experimental validation
+The work followed a practical engineering sequence:
+
+- Plant step tests and open-loop identification
+- Stabilizing PI tuning to ensure safe operation
+- Closed-loop data collection under real disturbances
+- Final controller refinement and on-plant validation
+
+This approach reflects **real industrial control practice**, where robustness and operability are prioritized over ideal models.
+
+## 👤 My Role & Responsibilities
+
+This project was developed collaboratively with a biochemical engineering team.
+
+My responsibility focused specifically on the **instrumentation, modeling, and control engineering aspects**, including:
+
+- Process instrumentation and signal acquisition
+- Dynamic characterization of the oxygen transfer process
+- System identification (open-loop and closed-loop)
+- PI controller design and tuning
+- Disturbance rejection strategy
+- Experimental validation and commissioning
+- Integration with the supervisory HMI (LabVIEW)
+
+All biochemical operation and process chemistry tasks were handled by the bioengineering team.
 
 
 ## 📂 Content
@@ -63,13 +83,17 @@ High-level supervisory architecture and closed-loop control structure.
 # 🛠 Methodology
 
 ## 1️⃣ Open-loop identification (OL)
-However, different experiments produced **significantly different parameters**, revealing:
 
-- disturbance sensitivity  
+Step tests were executed directly on the pilot plant to obtain an initial dynamic characterization of the oxygen process.
+
+However, different tests produced **significantly different models**, revealing:
+
+- sensitivity to disturbances  
 - nonlinear behavior  
-- poor reproducibility  
+- poor repeatability  
 
-This made open-loop models unreliable for direct controller design.
+These results indicated that **open-loop tuning was not reliable for this process**.
+
 
 <p align="center">
   <img alt="Open loop identification"
@@ -80,17 +104,18 @@ This made open-loop models unreliable for direct controller design.
 
 ## 2️⃣ Stabilizing PI (robust-first strategy)
 
-A simple PI controller was tuned via **exhaustive search** to obtain:
+Before pursuing accurate modeling, a conservative PI controller was tuned to:
 
-- stable behavior  
-- smooth regulation  
-- disturbance rejection  
-- safe plant operation  
+- guarantee stable operation  
+- protect the process  
+- reject disturbances  
+- enable clean measurements  
 
-Instead of aggressive tuning, the goal was to **stabilize the process first** and enable clean data collection.
+The goal was **operability first, modeling second**, following standard commissioning practice.
 
-As shown, at approximately **30.62 hours**, the system is disturbed due to the change in silica responsible for drying the air.  
-The process recovers and stabilizes around **30.7 hours**, corresponding to a settling time of approximately **280 seconds (2% criterion)**.
+During operation, a disturbance was intentionally introduced (air drying silica replacement).  
+The controller recovered the process within ~280 s (2% criterion), demonstrating adequate robustness for closed-loop testing.
+
 
 
 <table align="center">
@@ -117,9 +142,12 @@ With the process stabilized, identification was repeated under closed-loop opera
 This provided:
 
 - improved signal-to-noise ratio  
-- reduced disturbance influence  
-- consistent parameter estimation  
-- more reliable model for control design
+- reduced disturbance impact  
+- consistent parameter estimates  
+- a more realistic plant model  
+
+Closed-loop data proved significantly more reliable for controller design than open-loop experiments.
+
 
 <p align="center">
   <img alt="Closed Loop identification"
@@ -131,13 +159,18 @@ This provided:
 
 ## 4️⃣ Final PI design + validation
 
-Using the refined closed-loop model, the PI controller was redesigned and experimentally validated, achieving:
+Using the refined model, the PI controller was re-tuned and validated directly on the plant.
+
+The final tuning achieved:
 
 - lower overshoot  
-- improved robustness  
+- improved disturbance rejection  
 - faster stabilization of VTO  
+- smoother operation for operators  
 
----
+Performance was confirmed through repeated on-plant tests.
+
+
 
 # 📊 Results (experimental)
 
@@ -163,16 +196,16 @@ Using the refined closed-loop model, the PI controller was redesigned and experi
   </tr>
 </table>
 
----
+## 🧠 Skills Demonstrated
+- Industrial instrumentation
+- Process data acquisition
+- Dynamic modeling
+- System identification (OL/CL)
+- Practical PI tuning
+- Disturbance rejection design
+- Control system commissioning
+- MATLAB & LabVIEW integration
 
-
-# 🧠 Skills Demonstrated
-- System identification (open & closed loop)
-- PI controller design and tuning
-- Robust control under uncertainty
-- Experimental validation
-- MATLAB (System Identification / Control)
-- Industrial commissioning workflow
 
 
 # 📚 Related Publication

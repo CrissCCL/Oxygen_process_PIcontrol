@@ -43,7 +43,6 @@ Refined PI designed using the CL model
 | VTO stabilization | ~20 min | **~10 min** |
 | Model fit (closed-loop) | – | **≈ 95%** |
 
-> Note: values above are summarized from internal validation results. Figures in `/docs` show the final plots.
 
 ## 🧠 Skills Demonstrated
 - System identification (open & closed loop)
@@ -54,10 +53,6 @@ Refined PI designed using the CL model
 - Industrial commissioning workflow
 - HMI/SCADA integration (LabVIEW)
 
-## 📂 Repository Structure
-- `matlab/` → scripts for OL/CL identification, PI tuning, validation plots
-- `data/` → dataset template + notes (sanitized/synthetic recommended)
-- `docs/` → diagrams and exported results (PNG/SVG)
 
 ## 📚 Related Publication
 This project resulted in a peer-reviewed publication (link only; paper not redistributed here):

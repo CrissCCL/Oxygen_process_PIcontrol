@@ -37,7 +37,25 @@ All biochemical operation and process chemistry tasks were handled by the bioeng
 ## 📂 Content
 - `matlab/` → identification + PI tuning scripts
 
----
+## 🚀 Quick Start
+
+### Requirements
+- MATLAB R2022+ (recommended)
+- System Identification Toolbox
+- Control System Toolbox
+
+### Run
+
+1. Place your private dataset locally:
+   - file name: `dataOX.mat`
+   - variables required:
+     - `o_in`  → control input
+     - `o_out` → measured output
+
+2. Run:
+```matlab
+main_code
+```
 
 # 🏭 Experimental Setup (Pilot Plant)
 
@@ -213,12 +231,15 @@ Castro et al., *Automatic Control for the Production of Alginate by Azotobacter 
 https://ieeexplore.ieee.org/document/8905995
 
 
-
-
 ## 🔒 Data availability
 Real experimental data is not included due to confidentiality and collaborative research constraints.
 The repository provides a fully reproducible workflow; to run it, place your local `dataOX.mat`
 containing `o_in` and `o_out` in the project root (ignored by git).
+
+## 🔒 Notes
+Real datasets are intentionally excluded and ignored by `.gitignore` to protect confidentiality.
+Only synthetic or local private data should be used.
+
 
 ## ⚠️ Disclaimer
 This repository is a portfolio-style case study focused on modeling, identification, and control.

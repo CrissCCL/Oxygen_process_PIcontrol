@@ -63,15 +63,15 @@ Real pilot-plant installation used during identification and controller validati
 
 <table align="center">
   <tr>
-    <td align="center">
-      <img alt="Experimental Setup - Photo 1"
-           src="https://github.com/user-attachments/assets/02acd3c3-50b7-4b46-a6ba-3499929461fc"
-           width="400">
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/02acd3c3-50b7-4b46-a6ba-3499929461fc" width="400"><br>
+      <sub><b>(a) Pilot plant – overall setup</b><br>
+      Column, air supply, sensors and control hardware</sub>
     </td>
-    <td align="center">
-      <img alt="Experimental Setup - Photo 2"
-           src="https://github.com/user-attachments/assets/dda5f5d8-98d0-4261-b384-82c357023dc4"
-           width="420">
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/dda5f5d8-98d0-4261-b384-82c357023dc4" width="420"><br>
+      <sub><b>(b) Instrumentation detail</b><br>
+      Oxygen sensor, actuators and signal acquisition system</sub>
     </td>
   </tr>
 </table>
@@ -204,13 +204,13 @@ Performance was confirmed through repeated on-plant tests.
   <tr>
     <td align="center">
       <img alt="Initial PI response"
-           src="URL_IMAGEN_INICIAL"
+           src="https://github.com/user-attachments/assets/3e1c0d56-78c7-4a8e-a7a6-f63e982623fb"
            width="520"><br>
       <b>Initial PI – high overshoot (~33%)</b>
     </td>
     <td align="center">
       <img alt="Final PI response"
-           src="URL_IMAGEN_FINAL"
+           src="https://github.com/user-attachments/assets/3e1c0d56-78c7-4a8e-a7a6-f63e982623fb"
            width="520"><br>
       <b>Final PI – tuned response (7.5% overshoot, Ts ≈ 288 s)</b>
     </td>

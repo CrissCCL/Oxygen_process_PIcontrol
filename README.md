@@ -84,18 +84,19 @@ High-level supervisory architecture and closed-loop control structure.
 
 <table align="center">
   <tr>
-    <td align="center">
-      <img alt="System Architecture"
-           src="https://github.com/user-attachments/assets/b234a6c8-6c1f-448c-9c28-111485143da5"
-           width="250">
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/f1a91a3f-1270-4a5b-8e8f-913b8e6ee9df" width="520"><br>
+      <sub><b>(a) Disturbance rejection – full experiment</b><br>
+      Process recovery after silica replacement (~280 s settling time)</sub>
     </td>
-    <td align="center">
-      <img alt="Closed-Loop Control Block Diagram"
-           src="https://github.com/user-attachments/assets/58d6d27b-4262-4d46-a56c-e4c57da95afd"
-           width="500">
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/de49aa52-9f62-4b3a-bd31-7227cd918ddc" width="520"><br>
+      <sub><b>(b) Disturbance rejection – zoomed view</b><br>
+      Detailed transient showing damping and regulation</sub>
     </td>
   </tr>
 </table>
+
 
 
 # 🛠 Methodology
@@ -203,16 +204,19 @@ Performance was confirmed through repeated on-plant tests.
   <tr>
     <td align="center">
       <img alt="Initial PI response"
-           src="https://github.com/user-attachments/assets/3e1c0d56-78c7-4a8e-a7a6-f63e982623fb"
-           width="520">
+           src="URL_IMAGEN_INICIAL"
+           width="520"><br>
+      <b>Initial PI – high overshoot (~33%)</b>
     </td>
     <td align="center">
       <img alt="Final PI response"
-           src="https://github.com/user-attachments/assets/3e1c0d56-78c7-4a8e-a7a6-f63e982623fb"
-           width="520">
+           src="URL_IMAGEN_FINAL"
+           width="520"><br>
+      <b>Final PI – tuned response (7.5% overshoot, Ts ≈ 288 s)</b>
     </td>
   </tr>
 </table>
+
 
 ## 🧠 Skills Demonstrated
 - Industrial instrumentation

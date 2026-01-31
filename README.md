@@ -2,70 +2,98 @@
 ## Oxygen Transfer Rate (VTO) — Industrial Process Control Case Study
 
 ## 📖 Overview
-This project documents the **modeling, system identification, and PI control implementation**
-of a **pilot-scale biochemical production process**, where oxygen dynamics directly impact
-the Oxygen Transfer Rate (VTO).
+This repository documents a **practical industrial workflow** for **system identification and PI control**
+applied to a **pilot-scale biochemical process**, where oxygen dynamics directly impact the **Oxygen Transfer Rate (VTO)**.
 
-The work follows a **practical industrial workflow**, not a purely academic approach:
-
-- Open-loop identification showed inconsistent models due to disturbances and nonlinear behavior
-- A stabilizing PI controller was tuned via exhaustive search
-- The process was operated in closed-loop
-- Closed-loop identification produced a consistent low-noise model
-- A refined PI controller was designed and experimentally validated
-
-This approach mirrors **real commissioning practice in industrial plants**.
-
----
+Instead of forcing a single open-loop model, the controller was engineered using robust steps aligned with real plant commissioning:
+- **Open-loop identification** produced inconsistent models (disturbances + nonlinear behavior)
+- A **stabilizing PI** was tuned via **exhaustive search**
+- With the process stabilized, **closed-loop identification** yielded a consistent low-noise model
+- A **final PI** was designed and validated experimentally
 
 ## 🎯 Engineering Challenges
-- Noisy measurements  
-- Nonlinear biological dynamics  
-- Parameter drift during long experiments  
-- Open-loop models not consistent  
-
----
+- Noisy measurements
+- Nonlinear biological dynamics
+- Parameter drift over long experiments
+- Open-loop models not consistent
+- Slow process dynamics (long time constants)
 
 ## 🛠 Methodology
+### 1️⃣ Open-loop identification (OL)
+Step-response experiments and linear model estimation  
+→ inconsistent parameters due to disturbances / drift
 
-### 1️⃣ Open-loop identification
-Step experiments and linear model estimation  
-→ inconsistent parameters between tests
+### 2️⃣ Stabilizing PI (robust-first strategy)
+PI tuned via exhaustive search for safe and smooth regulation  
+→ enables plant-friendly operation and clean data capture
 
-### 2️⃣ Stabilizing PI (robust control first)
-Simple PI tuned for safe and smooth regulation
+### 3️⃣ Closed-loop identification (CL)
+Identification with the plant stabilized  
+→ improved SNR and consistent model estimate
 
-### 3️⃣ Closed-loop identification
-Identification performed with the process stabilized  
-→ reduced disturbances and improved model consistency
-
-### 4️⃣ Final PI design
-Controller redesigned using the refined model  
-→ improved overshoot and faster VTO stabilization
-
----
+### 4️⃣ Final PI design + validation
+Refined PI designed using the CL model  
+→ reduced overshoot and improved VTO stability
 
 ## 📊 Results (experimental)
-
 | Metric | Initial PI | Final PI |
-|--------|-----------|-----------|
+|--------|-----------:|---------:|
 | Overshoot | 33% | **7.5%** |
 | Settling time | 210 s | 288 s |
 | VTO stabilization | ~20 min | **~10 min** |
-| Model fit (CL) | – | **≈ 95%** |
+| Model fit (closed-loop) | – | **≈ 95%** |
 
----
+> Note: values above are summarized from internal validation results. Figures in `/docs` show the final plots.
 
 ## 🧠 Skills Demonstrated
-- System identification (OL & CL)
-- Robust PI design
-- Process control engineering
+- System identification (open & closed loop)
+- PI controller design and tuning
+- Robust control under uncertainty
 - Experimental validation
-- MATLAB Control Toolbox
+- MATLAB (System Identification / Control)
 - Industrial commissioning workflow
 - HMI/SCADA integration (LabVIEW)
 
----
-
 ## 📂 Repository Structure
+- `matlab/` → scripts for OL/CL identification, PI tuning, validation plots
+- `data/` → dataset template + notes (sanitized/synthetic recommended)
+- `docs/` → diagrams and exported results (PNG/SVG)
 
+## 📚 Related Publication
+This project resulted in a peer-reviewed publication (link only; paper not redistributed here):
+
+- **Castro et al.**, *Automatic Control for the Production of Alginate by Azotobacter Vinelandii*, IEEE.  
+ [IEEExplore](https://ieeexplore.ieee.org/document/8905995) 
+
+## 🚀 Quick Start
+1) Put your dataset (sanitized) in `data/`  
+2) Update `matlab/00_config.m` with file name, column mapping, sampling time  
+3) Run scripts in order:
+- `01_load_and_preprocess.m`
+- `02_open_loop_id.m`
+- `03_pi_bruteforce_search.m`
+- `04_closed_loop_id.m`
+- `05_pi_final_design.m`
+- `06_export_plots.m`
+
+## ⚠️ Disclaimer
+
+This repository is shared as a **portfolio-style case study** derived from a real pilot-scale control project.
+
+- Sensitive, proprietary, or identifying information has been removed or anonymized.
+- If any dataset is included, it should be **sanitized** or **synthetic**.
+- The repository demonstrates the engineering workflow:
+  open-loop identification issues → stabilizing PI tuning → closed-loop identification → final PI design.
+
+No confidential plant data or proprietary software is distributed.
+
+
+## 🤝 Support Projects
+
+Support my work on Patreon:  
+https://www.patreon.com/c/CrissCCL
+
+
+## 📜 License
+
+MIT License

@@ -24,7 +24,7 @@ Instead of forcing a single theoretical model, the controller was engineered usi
     <td align="center">
       <img alt="Experimental Setup - Photo 1"
            src="https://github.com/user-attachments/assets/02acd3c3-50b7-4b46-a6ba-3499929461fc"
-           width="450">
+           width="300">
     </td>
     <td align="center">
       <img alt="Experimental Setup - Photo 2"

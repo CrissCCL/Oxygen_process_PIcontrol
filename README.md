@@ -60,16 +60,6 @@ This project resulted in a peer-reviewed publication (link only; paper not redis
 - **Castro et al.**, *Automatic Control for the Production of Alginate by Azotobacter Vinelandii*, IEEE.  
  [IEEExplore](https://ieeexplore.ieee.org/document/8905995) 
 
-## 🚀 Quick Start
-1) Put your dataset (sanitized) in `data/`  
-2) Update `matlab/00_config.m` with file name, column mapping, sampling time  
-3) Run scripts in order:
-- `01_load_and_preprocess.m`
-- `02_open_loop_id.m`
-- `03_pi_bruteforce_search.m`
-- `04_closed_loop_id.m`
-- `05_pi_final_design.m`
-- `06_export_plots.m`
 
 ## ⚠️ Disclaimer
 

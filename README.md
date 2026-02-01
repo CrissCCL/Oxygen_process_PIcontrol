@@ -37,6 +37,66 @@ All biochemical operation and process chemistry tasks were handled by the bioeng
 ## 📂 Content
 - `matlab/` → identification + PI tuning scripts
 
+
+# 🔹 Identified Process Model
+
+The oxygen transfer dynamics were identified directly from **closed-loop experimental plant data**  
+and modeled using a **Second-Order Plus Dead Time (SOPDT)** structure.
+
+$$
+G(s)=\frac{K\,e^{-Ls}}{s^{2}+2\zeta \omega_n s+\omega_n^{2}}
+$$
+
+This model captures the dominant behavior observed during experiments:
+
+- slow dynamics  
+- underdamped transient response  
+- measurement noise  
+- transport/sensing delay  
+
+### Parameter meaning
+
+| Symbol | Description |
+|--------|-------------|
+| $$K$$ | Steady-state process gain |
+| $$\omega_n$$ | Natural frequency |
+| $$\zeta$$ | Damping ratio |
+| $$L$$ | Effective dead time |
+
+This structure was selected because it provides a good balance between:
+
+- physical interpretability  
+- robustness  
+- low complexity  
+- suitability for PI/PID tuning  
+
+Parameters were estimated using **MATLAB System Identification Toolbox (`tfest`)**,  
+using closed-loop data to improve signal-to-noise ratio and reduce disturbance bias.
+
+
+# 🔹 Controller Structure
+
+A classical **PI controller** was adopted due to its simplicity, robustness, and wide industrial use:
+
+$$
+C(s)=K_p\left(1+\frac{1}{T_i s}\right)
+$$
+
+| Parameter | Description |
+|-----------|-------------|
+| $$K_p$$ | Proportional gain |
+| $$T_i$$ | Integral time constant |
+
+The final tuning was selected to achieve:
+
+- low overshoot (~7.5%)  
+- stable operation  
+- disturbance rejection  
+- acceptable settling time (~288 s)  
+
+consistent with real industrial commissioning criteria.
+
+
 ## 🚀 Quick Start
 
 ### Requirements

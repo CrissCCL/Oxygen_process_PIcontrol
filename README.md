@@ -144,26 +144,24 @@ High-level supervisory architecture and closed-loop control structure.
 
 <table align="center">
   <tr>
-    <td align="center" width="35%">
-      <img src="https://github.com/user-attachments/assets/b234a6c8-6c1f-448c-9c28-111485143da5" width="250"><br>
+    <td align="center" width="45%">
+      <img src="docs/img/F5_setup_architecture.png" width="320"><br>
       <sub>
-      <b>(a) System architecture</b><br>
-      Instrumentation and supervisory structure showing sensors, actuators,
-      data acquisition, MATLAB identification workflow, and LabVIEW HMI integration.
+      <b>(a) Experimental instrumentation architecture (F5)</b><br>
+      Physical setup showing the bioreactor, gas mixing system (O₂/N₂), off-gas analyzers,
+      and data acquisition/control hardware used for real-time monitoring and actuation.
       </sub>
     </td>
-    <td align="center" width="65%">
-      <img src="https://github.com/user-attachments/assets/58d6d27b-4262-4d46-a56c-e4c57da95afd" width="500"><br>
+    <td align="center" width="55%">
+      <img src="docs/img/F7_control_block.png" width="520"><br>
       <sub>
-      <b>(b) Closed-loop control block diagram</b><br>
-      SOPDT plant model with dead time controlled by a PI regulator.
-      Identification and validation performed using experimental input–output data.
+      <b>(b) Closed-loop control structure (F7)</b><br>
+      PI controller regulating oxygen transfer rate (OTR) through inlet oxygen flow,
+      using analyzer feedback for closed-loop identification and control design.
       </sub>
     </td>
   </tr>
 </table>
-
-
 
 
 # 🛠 Methodology

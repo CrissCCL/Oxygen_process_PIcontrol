@@ -1,5 +1,13 @@
 # 🧪⚙️ Closed-Loop Identification & PI Control  
 
+![MATLAB](https://img.shields.io/badge/MATLAB-Simulation-blue)
+![Control](https://img.shields.io/badge/Control-PI%20Controller-orange)
+![Process](https://img.shields.io/badge/Process-Industrial%20Oxygen-green)
+![Modeling](https://img.shields.io/badge/Modeling-System%20Identification-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+
+
 ## Oxygen Transfer Rate (VTO) Monitoring & Indirect Regulation — Industrial Process Control Case Study
 
 

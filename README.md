@@ -126,7 +126,7 @@ Real pilot-plant installation used during identification and controller validati
     <td align="center" width="50%">
       <img src="https://github.com/user-attachments/assets/02acd3c3-50b7-4b46-a6ba-3499929461fc" width="400"><br>
       <sub><b>(a) Pilot plant – overall setup</b><br>
-      Column, air supply, sensors and control hardware</sub>
+      Reactor, oxigen supply, pump, mixer, sensors and control hardware</sub>
     </td>
     <td align="center" width="50%">
       <img src="https://github.com/user-attachments/assets/dda5f5d8-98d0-4261-b384-82c357023dc4" width="420"><br>

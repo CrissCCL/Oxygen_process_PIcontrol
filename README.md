@@ -275,7 +275,7 @@ Performance was confirmed through repeated on-plant tests.
     </td>
     <td align="center">
       <img alt="Final PI response"
-           src="https://github.com/user-attachments/assets/3e1c0d56-78c7-4a8e-a7a6-f63e982623fb"
+            src="https://github.com/user-attachments/assets/fdd232c0-f722-45d9-9070-e2a09d9fd3cb"
            width="520"><br>
       <b>Final PI – tuned response (7.5% overshoot, Ts ≈ 288 s)</b>
     </td>

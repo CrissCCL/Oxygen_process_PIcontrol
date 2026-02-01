@@ -1,6 +1,7 @@
 # 🧪⚙️ Closed-Loop Identification & PI Control  
 
-## Oxygen Transfer Rate (VTO) — Industrial Process Control Case Study
+## Oxygen Transfer Rate (VTO) Monitoring & Indirect Regulation — Industrial Process Control Case Study
+
 
 ## 📖 Overview
 This project presents an **industrial-style commissioning workflow** for system identification and PI control
@@ -97,6 +98,32 @@ The final tuning was selected to achieve:
 consistent with real industrial commissioning criteria.
 
 
+# 🔹 Control Strategy (Indirect OTR/VTO Regulation)
+
+The feedback loop is implemented using fast and reliable gas measurements:
+
+- **Manipulated variable:** inlet oxygen concentration ($O_2^{in}$)  
+- **Measured variable:** outlet oxygen concentration ($O_2^{out}$)  
+
+The Oxygen Transfer Rate (OTR/VTO) cannot be directly measured or controlled online.
+Instead, it is calculated from gas balances and used only as a performance indicator.
+
+Although the controller does not directly regulate VTO, regulating oxygen flow
+stabilizes the reactor oxygen dynamics, which **indirectly improves VTO behavior
+and reduces its settling time**.
+
+### Practical rationale
+
+This strategy provides:
+
+- faster measurements  
+- lower noise  
+- better robustness  
+- simpler instrumentation  
+
+which makes it more suitable for real industrial environments than direct VTO control.
+
+
 ## 🚀 Quick Start
 
 ### Requirements
@@ -156,8 +183,8 @@ High-level supervisory architecture and closed-loop control structure.
       <img src="https://github.com/user-attachments/assets/58d6d27b-4262-4d46-a56c-e4c57da95afd" width="520"><br>
       <sub>
       <b>(b) Closed-loop control structure </b><br>
-      PI controller regulating oxygen transfer rate (OTR) through inlet oxygen flow,
-      using analyzer feedback for closed-loop identification and control design.
+      PI controller regulating inlet oxygen flow using outlet oxygen feedback.
+      OTR/VTO is computed as a secondary performance metric, not directly controlled.
       </sub>
     </td>
   </tr>

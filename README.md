@@ -275,7 +275,6 @@ Closed-loop data proved significantly more reliable for controller design than o
 </p>
 
 
-
 ## 4️⃣ Final PI design + validation
 
 Using the refined model, the PI controller was re-tuned and validated directly on the plant.
@@ -288,7 +287,6 @@ The final tuning achieved:
 - smoother operation for operators  
 
 Performance was confirmed through repeated on-plant tests.
-
 
 
 # 📊 Results (experimental)
